@@ -1,2 +1,4 @@
-# TDD_KATA
-Yongjae Lee
+## PrimeFactor
+---
+PrimeFactor
+TDD KATA
