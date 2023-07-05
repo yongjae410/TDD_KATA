@@ -8,10 +8,16 @@ public:
 	vector<int> of(int num)
 	{
 		vector<int> result = { };
-		if(num > 1)
+
+		for (int dividor = 2; num > 1; dividor++)
 		{
-			result.push_back(num);
+			while(num % dividor == 0)
+			{
+				result.push_back(dividor);
+				num = num / dividor;
+			}
 		}
+
 		return result;
 	}
 };
