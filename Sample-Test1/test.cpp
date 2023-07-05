@@ -3,8 +3,18 @@
 #include <vector>
 
 using namespace std;
-TEST(PrimeFactorTest, Test1) {
+
+class PrimeFactorTestFixture : public testing::Test
+{
+public:
 	PrimeFactor pf;
 	vector<int> expected = { };
+};
+TEST_F(PrimeFactorTestFixture, Test1) {
 	EXPECT_EQ(expected, pf.of(1));
+}
+
+TEST_F(PrimeFactorTestFixture, Test2) {
+	expected = { 2 };
+	EXPECT_EQ(expected, pf.of(2));
 }
